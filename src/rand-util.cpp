@@ -23,3 +23,25 @@
  */
 
 #include <rand-util.hpp>
+#include <random>
+
+namespace
+{
+    std::random_device seed;
+    std::default_random_engine engine(seed());
+    std::uniform_real_distribution<double> uniform_dist(0.0, 1.0);
+    std::normal_distribution<> normal_dist(0.0, 1.0);
+}
+
+namespace randutil
+{
+    double GenNumFromUniformDist()
+    {
+        return uniform_dist(engine);
+    }
+    
+    double GenNumFromNormalDist()
+    {
+        return normal_dist(engine);
+    }
+}

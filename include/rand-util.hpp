@@ -27,6 +27,11 @@
 
 namespace randutil
 {
+    /// \brief Generate a random number from a standard uniform distribution.
+    double GenNumFromUniformDist();
+    
+    /// \brief Generate a random number from a standard normal distribution.
+    double GenNumFromNormalDist();
 }
 
 #endif // rand_util_hpp
