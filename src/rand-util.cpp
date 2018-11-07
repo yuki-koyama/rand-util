@@ -30,7 +30,7 @@ namespace
     std::random_device seed;
     std::default_random_engine engine(seed());
     std::uniform_real_distribution<double> uniform_dist(0.0, 1.0);
-    std::normal_distribution<> normal_dist(0.0, 1.0);
+    std::normal_distribution<double> normal_dist(0.0, 1.0);
 }
 
 namespace randutil
@@ -43,5 +43,11 @@ namespace randutil
     double GenNumFromNormalDist()
     {
         return normal_dist(engine);
+    }
+    
+    int GenNumFromUniformIntDist(int lower_bound, int upper_bound)
+    {
+        std::uniform_int_distribution<int> uniform_int_dist(lower_bound, upper_bound);
+        return uniform_int_dist(engine);
     }
 }

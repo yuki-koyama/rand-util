@@ -32,6 +32,9 @@ namespace randutil
     
     /// \brief Generate a random number from a standard normal distribution.
     double GenNumFromNormalDist();
+    
+    /// \brief Generate a random number from a uniform integer distribution.
+    int GenNumFromUniformIntDist(int lower_bound, int upper_bound);
 }
 
 #endif // rand_util_hpp
