@@ -34,6 +34,8 @@ namespace randutil
     double GenNumFromNormalDist();
     
     /// \brief Generate a random number from a uniform integer distribution.
+    /// \param lower_bound The minimum value that is possible to be generated.
+    /// \param upper_bound The maximum value that is possible to be generated.
     int GenNumFromUniformIntDist(int lower_bound, int upper_bound);
 }
 
