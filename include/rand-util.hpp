@@ -40,6 +40,12 @@ namespace randutil
     /// \param upper_bound The maximum value that is possible to be generated.
     int GenNumFromUniformIntDist(int lower_bound, int upper_bound);
     
+    /// \brief Generate a set of distinct random numbers from a uniform integer distribution.
+    /// \param lower_bound The minimum value that is possible to be generated.
+    /// \param upper_bound The maximum value that is possible to be generated.
+    /// \param num The number of numbers to be generated.
+    /// \details This function uses a greedy algorithm that assumes lower_bound - upper_bound >> num.
+    ///          Otherwise, this function gets unreasonably slow.
     std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num);
 }
 
