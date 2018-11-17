@@ -37,6 +37,8 @@ namespace randutil
     /// \param lower_bound The minimum value that is possible to be generated.
     /// \param upper_bound The maximum value that is possible to be generated.
     int GenNumFromUniformIntDist(int lower_bound, int upper_bound);
+    
+    std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num);
 }
 
 #endif // rand_util_hpp

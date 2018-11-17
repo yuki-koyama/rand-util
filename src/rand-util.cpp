@@ -50,4 +50,26 @@ namespace randutil
         std::uniform_int_distribution<int> uniform_int_dist(lower_bound, upper_bound);
         return uniform_int_dist(engine);
     }
+    
+    std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num)
+    {
+        std::vector<int> results;
+        for (int i = 0; i < num; ++ i)
+        {
+            while (true)
+            {
+                const int candidate_num = GenNumFromUniformIntDist(lower_bound, upper_bound);
+                
+                bool duplicated = false;
+                for (const int& num : results)
+                {
+                    if (num == candidate_num) { duplicated = true; break; }
+                }
+                
+                if (!duplicated) { results.push_back(candidate_num); break; }
+            }
+        }
+        
+        return results;
+    }
 }
