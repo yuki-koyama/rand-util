@@ -25,6 +25,8 @@
 #ifndef rand_util_hpp
 #define rand_util_hpp
 
+#include <vector>
+
 namespace randutil
 {
     /// \brief Generate a random number from a standard uniform distribution.
