@@ -47,12 +47,16 @@ namespace randutil
     
     int GenNumFromUniformIntDist(int lower_bound, int upper_bound)
     {
+        assert(upper_bound - lower_bound >= 0 && "Invalid args");
+        
         std::uniform_int_distribution<int> uniform_int_dist(lower_bound, upper_bound);
         return uniform_int_dist(engine);
     }
     
     std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num)
     {
+        assert(num >= 0 && upper_bound - lower_bound > num && "Invalid args");
+        
         std::vector<int> results;
         for (int i = 0; i < num; ++ i)
         {
