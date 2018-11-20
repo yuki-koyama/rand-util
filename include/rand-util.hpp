@@ -26,6 +26,7 @@
 #define rand_util_hpp
 
 #include <vector>
+#include <string>
 
 namespace randutil
 {
@@ -47,6 +48,8 @@ namespace randutil
     /// \details This function uses a greedy algorithm that assumes lower_bound - upper_bound >> num.
     ///          Otherwise, this function gets unreasonably slow.
     std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num);
+    
+    std::string GenRandomString(int length = 16);
 }
 
 #endif // rand_util_hpp

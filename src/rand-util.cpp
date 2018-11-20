@@ -76,4 +76,18 @@ namespace randutil
         
         return results;
     }
+    
+    std::string GenRandomString(int length)
+    {
+        constexpr char char_set[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        
+        std::string result = "";
+        
+        for (int i = 0; i < length; ++ i)
+        {
+            result += char_set[GenNumFromUniformIntDist(0, 61)];
+        }
+        
+        return result;
+    }
 }
