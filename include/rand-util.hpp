@@ -50,6 +50,8 @@ namespace randutil
     ///          Otherwise, this function gets unreasonably slow.
     std::vector<int> GenDistinctNumsFromUniformIntDist(int lower_bound, int upper_bound, int num);
     
+    /// \brief Generate a string consisting of random characters.
+    /// \param length The length of the resulting string.
     std::string GenRandomString(int length = 16);
 }
 
