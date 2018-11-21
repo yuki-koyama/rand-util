@@ -27,7 +27,6 @@
 
 #include <vector>
 #include <string>
-#include <cassert>
 
 namespace randutil
 {

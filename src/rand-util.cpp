@@ -24,6 +24,7 @@
 
 #include <rand-util.hpp>
 #include <random>
+#include <cassert>
 
 namespace
 {
